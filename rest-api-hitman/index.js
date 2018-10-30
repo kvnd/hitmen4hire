@@ -6,8 +6,10 @@ const api = require("./routes/api");
 // Set up Express app
 const app = express();
 
+var mongodbUri ='mongodb://kev:passw0rd@ds145083.mlab.com:45083/hitmen';
+
 // Connect to mongodb
-mongoose.connect('mongodb://localhost/hitman4hire', {useNewUrlParser: true});
+mongoose.connect(mongodbUri);
 // Overriding deprecated mongoose Promise
 mongoose.Promise = global.Promise;
 
